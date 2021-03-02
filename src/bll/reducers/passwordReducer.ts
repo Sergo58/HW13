@@ -1,5 +1,5 @@
 let initial=''
-export const testReducer = (state=initial) => {
+export const passwordReducer = (state=initial) => {
     switch (state) {
 
 
