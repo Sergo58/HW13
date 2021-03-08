@@ -1,3 +1,6 @@
+
+import {API, } from "../../api/passwordForgot-api";
+
 let initial=''
 export const passwordReducer = (state=initial) => {
     switch (state) {
@@ -8,3 +11,20 @@ export const passwordReducer = (state=initial) => {
 };
 
 
+
+
+
+export const passwordTC = (email:string) => () => {
+
+    API.passwordForgot(email)
+
+        .then(res => {
+
+
+                console.log(res.data.info)
+
+        })
+        .catch((error) => {
+
+        })
+}
